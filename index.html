@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP Address</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="div-container">
+        <h1>MY PUBLIC IP ADDRESS: <span id="Ip"></span></h1>
+        <button id="getData">Get Data</button>
+
+        <div class="info-container">
+            <div class="info-data">
+                <div id="latitude">Lat:</div>
+                <div id="longitude">Long:</div>
+            </div>
+
+            <div class="info-data">
+                <div id="city">City:</div>
+                <div id="region">Region:</div>
+            </div>
+            <div class="info-data">
+                <div id="organisation">Organisation:</div>
+                <div id="hostname">HostName:</div>
+            </div>
+    </div>
+    <div id="demo"></div>
+    <iframe id="map" style="margin-top: 20px;" width="100%" height="400" frameborder="0px" scrolling="no" marginheight ="0" marginwidth="0"
+    src=""></iframe>
+    <div class="loc-container">
+        <div id="timezone">Time Zone:</div>
+        <div id="date-time">Date and Time:</div>
+        <div id="pincode">Pincode</div>
+        <div id="message">Message:</div>
+    </div>
+    <input id="search" type="search" placeholder="Filter">
+    <div class="poffice-container">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js" integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="index.js"></script>
+</body>
+</html>
