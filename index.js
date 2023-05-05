@@ -45,18 +45,8 @@ fetch('https://api.ipify.org?format=json')
         pin = response.data.postal;
         pincode.innerHTML = `<strong>Pincode:</strong> ${response.data.postal}`;
         var loc = document.getElementById("demo");
-     
-        if (navigator.geolocation) {
-       navigator.geolocation.getCurrentPosition(showPosition);
-        } else { 
-         loc.innerHTML = "Geolocation is not supported by this browser.";
-        }
-
-
-        function showPosition(position) {
-         const mapUrl = `https://maps.google.com/maps?q=${position.coords.latitude},${position.coords.longitude}&z=15&output=embed`;
-           map.setAttribute("src", mapUrl);
-        }
+        const mapUrl = `https://maps.google.com/maps?q=${response.data.latitude},${response.data.longitude}&z=15&output=embed`;
+        map.setAttribute("src", mapUrl);
 
          postOffice(pin);
 
